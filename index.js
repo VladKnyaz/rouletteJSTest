@@ -124,8 +124,9 @@ function startRoulette(caseId) {
         userPrizes.push(prize)
         cards.style.transition = `${randomTimeTransition}s ease`;
         cards.style.transform = `translate(-${prize.idInArray * 100 - utils.random(30, 48)}px, 0)`;
+        refreshWinText(); // Обновление данных о призах
       }, 0);
-      refreshWinText(); // Обновление данных о призах
+      
       break;
 
     default:
